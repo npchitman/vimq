@@ -11,12 +11,13 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-sandwich'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'cdelledonne/vim-cmake'
+Plug 'tmhedberg/simpylfold'
 
 call plug#end()
 
-source $HOME/.config/nvim/modules/coc.vim
-source $HOME/.config/nvim/modules/defx.vim
-source $HOME/.config/nvim/modules/vista.vim
-source $HOME/.config/nvim/modules/others.vim
-source $HOME/.config/nvim/modules/hlsearch.vim
-source $HOME/.config/nvim/modules/whitespace.vim
+for f in split(glob('~/.config/nvim/modules/*.vim'), '\n')
+    exe 'source' f
+endfor

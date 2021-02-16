@@ -1,12 +1,8 @@
+nnoremap <leader>vr :source $MYVIMRC<CR>
+
 nmap <space>i :Vista<CR>
 nmap <space>e :Defx<CR>
 map <leader>f :Files<CR>
-
-" window split
-nnoremap <silent> <C-h> :call WinMove('h')<CR>
-nnoremap <silent> <C-j> :call WinMove('j')<CR>
-nnoremap <silent> <C-k> :call WinMove('k')<CR>
-nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 " coc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -27,8 +23,13 @@ nmap <leader>rn <Plug>(coc-rename)
 "show all diagnostics.
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " clear whitespace
 nnoremap <leader><space> :WhitespaceErase<CR>
+
+" quick build (Cmake)
+nnoremap <leader>rr <Plug>(CMakeBuildTarget)
+
+" easymotion
+nmap <leader><leader>k <leader><leader>b
+nmap <leader><leader>j <leader><leader>w
