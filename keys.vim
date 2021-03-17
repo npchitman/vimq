@@ -1,8 +1,22 @@
+" basic
 nnoremap <leader>vr :source $MYVIMRC<CR>
 
 nmap <space>i :Vista<CR>
 nmap <space>e :Defx<CR>
 map <leader>f :Files<CR>
+nmap L $
+nmap H ^
+
+" emacs like
+inoremap <C-w> <C-[>diwa
+inoremap <C-h> <BS>
+inoremap <C-d> <Del>
+inoremap <C-k>  <ESC>d$a
+inoremap <C-u> <C-G>u<C-U>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-a> <ESC>^i
+inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 
 " coc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
