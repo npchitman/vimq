@@ -14,6 +14,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cdelledonne/vim-cmake'
+Plug 'cespare/vim-toml'
 Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
