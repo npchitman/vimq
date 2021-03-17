@@ -18,6 +18,16 @@ inoremap <C-f> <Right>
 inoremap <C-a> <ESC>^i
 inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 
+" command line
+cnoremap <C-p> <Up>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-d> <Del>
+cnoremap <C-h> <BS>
+cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
+
 " coc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
